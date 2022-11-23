@@ -1,0 +1,10 @@
+<h1>Restaurants</h1>
+<hr>
+<h2><%= link_to "Add restaurant", "restaurants/new", class: "btn btn-dark" %></h2>
+<hr>
+<% @restaurants.each do |restaurant| %>
+  <h3><%= link_to "#{restaurant.name}", "restaurants/#{restaurant.id}", class: "btn btn-dark"%></h3>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.category %></p>
+  <hr>
+<% end %>

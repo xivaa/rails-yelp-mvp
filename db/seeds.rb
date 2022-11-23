@@ -2,6 +2,10 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
+5.times do
+  Restaurant.create(name: Faker::Company.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.cell_phone, category: %w[chinese italian japanese french belgian].sample )
+end
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
